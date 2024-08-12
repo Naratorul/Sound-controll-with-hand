@@ -57,7 +57,6 @@ while True:
     curr_time = time.time()
     fps = 1 / (curr_time - prev_time)
     prev_time = curr_time
-    # Afișăm FPS-ul în colțul din dreapta sus
     cv2.putText(img, f'FPS: {int(fps)}', (w - 150, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.imshow('Image', img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
