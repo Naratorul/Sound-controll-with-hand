@@ -32,8 +32,8 @@ while True:
             bbox = int(bboxC.xmin * w), int(bboxC.ymin * h), \
                    int(bboxC.width * w), int(bboxC.height * h)
             cv2.rectangle(img, bbox, (0, 255, 0), 2)
-            cv2.putText(img, 'Face', (bbox[0], bbox[1] - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 
+            cv2.putText(img, 'Face', (bbox[0], bbox[1] - 10)),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 
     if results_hands.multi_hand_landmarks:
         for idx, hand_landmarks in enumerate(results_hands.multi_hand_landmarks):
             mp_draw.draw_landmarks(img, hand_landmarks, mp_hands.HAND_CONNECTIONS)
